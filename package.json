@@ -6,6 +6,12 @@
   "engines": {
     "node": ">=23.11.0"
   },
+  "license": "MIT",
+  "type": "module",
+  "author": {
+    "name": "SuKyoung Shin",
+    "email": "sukyoung.dev@gmail.com"
+  },
   "scripts": {
     "start": "tsx src/index.ts",
     "test": "tsx src/test.ts"
