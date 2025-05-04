@@ -1,4 +1,4 @@
-# TypeScript Practice
+# JS/TS Practice Template
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Node.js](https://img.shields.io/badge/Node.js-v23.11.0-green)
