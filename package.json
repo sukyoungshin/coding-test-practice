@@ -1,0 +1,16 @@
+{
+  "name": "basic-typescript-practice",
+  "version": "0.0.1",
+  "description": "A simple TypeScript practice using tsx",
+  "repository": "https://github.com/sukyoungshin/basic-typescript-practice-template",
+  "engines": {
+    "node": ">=23.11.0"
+  },
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "test": "tsx src/test.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.4"
+  }
+}
