@@ -105,9 +105,16 @@ npm run format   # 코드 자동 포맷 (Prettier)
 ```json
 {
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript", "typescript"]
 }
 ```
+
+> 저장할 때 Prettier로 포맷되고, ESLint에 따라 사용되지 않는 코드(import 등)가 자동 정리됩니다.
 
 ---
 
