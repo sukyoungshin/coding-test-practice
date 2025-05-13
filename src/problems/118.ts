@@ -8,14 +8,20 @@
 export function Problem118() {
   const user = { name: 'Hong', passwd: 'xyz', addr: 'Seoul' };
   function getValueExceptInitial(k: keyof typeof user) {
-    const { name, passwd, addr } = user;
+    // const { name, passwd, addr } = user;
     // 1번 풀이
     // const [first, ...rest] = { name, passwd, addr }[k];
     // return rest.join('');
 
     // 2번 풀이
-    const val = { name, passwd, addr }[k];
-    return val.slice(1);
+    // const val = { name, passwd, addr }[k];
+    // return val.slice(1);
+
+    // 3번 풀이
+    const { [k]: val } = user;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [_, ...rest] = val;
+    return rest.join('');
   }
 
   console.log(getValueExceptInitial('name')); // 'ong'
