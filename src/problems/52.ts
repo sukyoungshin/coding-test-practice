@@ -7,7 +7,7 @@
 // …
 // 10 3.162
 
-export const Example52_1 = () => {
+export const problem52_1 = () => {
   for (let i = 1; i <= 10; i++) {
     const sqrt = Math.sqrt(i);
     if (sqrt % 1 !== 0) {
@@ -16,7 +16,7 @@ export const Example52_1 = () => {
   }
 };
 
-export const Example52_2 = () => {
+export const problem52_2 = () => {
   for (let i = 1; i <= 10; i++) {
     const n = Math.sqrt(i);
 

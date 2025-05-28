@@ -5,7 +5,7 @@
 //     return (다);
 // }
 
-export function Problem118() {
+export function problem118() {
   const user = { name: 'Hong', passwd: 'xyz', addr: 'Seoul' };
   function getValueExceptInitial(k: keyof typeof user) {
     // const { name, passwd, addr } = user;

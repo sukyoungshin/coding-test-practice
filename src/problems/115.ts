@@ -1,7 +1,7 @@
 // user 객체를 받아서 id와 name을 출력하는 함수를 3개의 함수로 작성하시오.
 // (Function signature를 3개 이상으로 표현하기)
 
-export function Problem115() {
+export function problem115() {
   function f1(user) {
     const { id, name } = user;
     console.log(`${id}, '${name}'`);

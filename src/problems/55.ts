@@ -1,7 +1,7 @@
 // 다음 소수 배열의 평균을 소수점 2자리까지 구해보세요.
 // (단, toFixed를 사용하지 말고, 정상적인 숫자가 아닌 경우는 평균에서 제외하세요!)
 
-export const Example55 = () => {
+export const problem55 = () => {
   function isValidNumber(value: number | string | null | undefined): value is number {
     return typeof value === 'number' && !isNaN(value);
   }

@@ -5,7 +5,7 @@
 // 0.14 + 0.28     // 0.42000000000000004
 // 0.34 + 0.226    // 0.5660000000000001
 
-export const Example54 = () => {
+export const problem54 = () => {
   function getDecimalPrecision(numberValue: number): number {
     if (numberValue % 1 === 0) return 0;
     return 1 + getDecimalPrecision(numberValue * 10);

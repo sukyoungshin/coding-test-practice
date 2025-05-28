@@ -1,7 +1,7 @@
 // 오늘 날짜의 요일을 출력하는 switch문을 사용해서 작성해보고, switch 문을 사용하지 않은 더 간단한 방법도 찾아보세요.
 // 오늘은 금요일입니다.
 
-export const Example53_1 = () => {
+export const problem53_1 = () => {
   function getToday(day) {
     switch (day) {
       case 0:
@@ -27,7 +27,7 @@ export const Example53_1 = () => {
   console.log(`오늘은 ${day}요일입니다.`);
 };
 
-export const Example53_2 = () => {
+export const problem53_2 = () => {
   const today = new Date();
   const index = today.getDay(); // 요일번호 0 ~ 6
   const WEEK_NAMES = '일월화수목금토';
