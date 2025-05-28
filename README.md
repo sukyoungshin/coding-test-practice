@@ -33,7 +33,7 @@ nvm install    # .nvmrc에 지정된 버전이 없다면 자동 설치
 **📌 TypeScript 문제**
 
 - `src/problems/` 디렉토리에 `페이지명.ts` 형식으로 작성합니다.
-- 예시: `src/problems/1.ts`
+- 예시: `src/problems/example.ts`
 
 예시 🔽
 
@@ -50,7 +50,7 @@ export const example2 = () => {
 };
 ```
 
-**📌 JavaScript 문제 (선택)**
+**📌 JavaScript 문제**
 
 - TypeScript가 익숙하지 않다면 .js 확장자를 사용해도 됩니다.
 - 예시: `src/problems/js-example.js`
@@ -73,14 +73,14 @@ export const example3 = () => {
 
 예를 들어 `src/problems/example.ts`를 실행하려면:
 
-```bash
-ts src/problems/example.ts
+```shell
+> ts src/problems/example.ts
 ```
 
 또는 해당 디렉토리(src/problems)로 이동한 후:
 
-```bash
-ts example.ts
+```shell
+> ts example.ts
 ```
 
 > ts 명령어는 내부적으로 npx tsx를 사용하며, 입력한 경로는 현재 디렉토리 기준으로 해석됩니다.
