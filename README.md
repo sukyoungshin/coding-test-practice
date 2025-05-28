@@ -67,13 +67,24 @@ export const example3 = () => {
 
 ## 2. 문제 실행 방법 (택 1)
 
-### 2-1. 개별 파일을 직접 실행하기
+### 2-1. `ts` 명령어로 실행하기 (로컬 CLI)
 
-`src/problems` 디렉토리에서 아래처럼 실행할 수 있습니다:
+루트에 등록된 실행기(`ts`)를 통해 `.ts` 파일을 간편하게 실행할 수 있습니다.
+
+예를 들어 `src/problems/example.ts`를 실행하려면:
 
 ```bash
-./ts example.ts
+ts src/problems/example.ts
 ```
+
+또는 해당 디렉토리(src/problems)로 이동한 후:
+
+```bash
+ts example.ts
+```
+
+> ts 명령어는 내부적으로 npx tsx를 사용하며, 입력한 경로는 현재 디렉토리 기준으로 해석됩니다.
+> npm link를 통해 전역 CLI처럼 등록되어 있습니다.
 
 실행결과 예시
 
