@@ -1,6 +1,6 @@
 import js from '@eslint/js';
-import tseslint from 'typescript-eslint';
 import unusedImports from 'eslint-plugin-unused-imports';
+import tseslint from 'typescript-eslint';
 
 export default [
   js.configs.recommended,
@@ -16,6 +16,7 @@ export default [
         console: true,
         window: true,
         document: true,
+        process: true,
       },
     },
     plugins: {
