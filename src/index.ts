@@ -1,6 +1,6 @@
-import { Example1, Example2 } from './problems/example';
-import { Example1_js } from './problems/js-example.js';
+import { example1, example2 } from './problems/example';
+import { example3 } from './problems/js-example.js';
 
-Example1();
-Example2();
-Example1_js();
+example1();
+example2();
+example3();

@@ -1,3 +1,3 @@
-export const Example1_js = () => {
-  console.log('✅ JavaScript Example1');
+export const example3 = () => {
+  console.log('✅ JavaScript example3');
 };

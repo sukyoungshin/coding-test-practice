@@ -13,10 +13,17 @@ TypeScript 및 JavaScript 연습 문제를 손쉽게 작성하고 실행해볼 �
 
 ## 📦 설치
 
-필요한 모듈을 설치합니다:
+필요한 패키지를 설치하세요:
 
 ```shell
 npm install
+```
+
+Node.js 버전을 프로젝트에 맞게 설정합니다:
+
+```shell
+nvm use        # .nvmrc 기준으로 자동 설정
+nvm install    # .nvmrc에 지정된 버전이 없다면 자동 설치
 ```
 
 ## ▶ 사용 방법
@@ -26,35 +33,35 @@ npm install
 **📌 TypeScript 문제**
 
 - `src/problems/` 디렉토리에 `페이지명.ts` 형식으로 작성합니다.
-- 예: `src/problems/1.ts`
+- 예시: `src/problems/1.ts`
 
 예시 🔽
 
 ```ts
 // src/problems/example.ts
 
-export const Example1 = () => {
-  console.log('🚀 Example1');
+export const example1 = () => {
+  console.log('🚀 example1');
 };
 
-// ✅ 필요하다면 여러 개의 문제 풀이를 추가할 수 있습니다.
-export const Example2 = () => {
-  console.log('🚀 Example2');
+// ✅ 하나의 파일에 여러 문제 풀이를 함께 작성해도 됩니다.
+export const example2 = () => {
+  console.log('🚀 example2');
 };
 ```
 
 **📌 JavaScript 문제 (선택)**
 
 - TypeScript가 익숙하지 않다면 .js 확장자를 사용해도 됩니다.
-- 예: `src/problems/js-example.js`
+- 예시: `src/problems/js-example.js`
 
 예시 🔽
 
 ```js
 // src/problems/js-example.js
 
-export const Example1_js = () => {
-  console.log('✅ JavaScript Example1');
+export const example3 = () => {
+  console.log('✅ JavaScript example1');
 };
 ```
 
@@ -62,15 +69,15 @@ export const Example1_js = () => {
 
 ```ts
 // src/index.ts
-import { Example1, Example2 } from './problems/example';
-import { Example1_js } from './problems/js-example.js';
+import { example1, example2 } from './problems/example';
+import { example3 } from './problems/js-example.js';
 
-Example1();
-Example2();
-Example1_js();
+example1();
+example2();
+example3();
 ```
 
-> ⚠️ 참고: JS 파일을 import할 때는 `.js` 확장자를 반드시 붙여야 합니다.
+> ⚠️ 참고: `.js` 파일은 import 시 `.js` 확장자를 명시해야 합니다.
 
 ### 3. 실행
 
@@ -86,9 +93,9 @@ npm run start
 > basic-typescript-practice@0.0.1 start
 > tsx src/index.ts
 
-🚀 TypeScript Example1
-🚀 TypeScript Example2
-✅ JavaScript Example1
+🚀 TypeScript example1
+🚀 TypeScript example2
+✅ JavaScript example3
 ```
 
 ---
@@ -100,7 +107,7 @@ npm run lint     # 코드 스타일 및 규칙 검사 (ESLint)
 npm run format   # 코드 자동 포맷 (Prettier)
 ```
 
-💡 VSCode 사용자라면 자동 포맷을 위해 아래 설정을 `.vscode/settings.json`에 추가하세요:
+💡 VSCode 사용자라면 저장 시 자동 포맷 및 린트 적용을 위해 아래 설정을 `.vscode/settings.json`에 추가하세요:
 
 ```json
 {
@@ -114,7 +121,7 @@ npm run format   # 코드 자동 포맷 (Prettier)
 }
 ```
 
-> 저장할 때 Prettier로 포맷되고, ESLint에 따라 사용되지 않는 코드(import 등)가 자동 정리됩니다.
+> 위 설정을 적용하면 저장 시 Prettier로 자동 포맷되고, ESLint에 따라 사용되지 않는 코드(import 등)도 자동으로 제거됩니다.
 
 ---
 
