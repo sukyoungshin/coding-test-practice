@@ -6,7 +6,6 @@
   "engines": {
     "node": ">=23.11.0"
   },
-  "license": "MIT",
   "type": "module",
   "author": {
     "name": "SuKyoung Shin",

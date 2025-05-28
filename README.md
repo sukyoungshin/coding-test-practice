@@ -1,6 +1,5 @@
 # JS/TS Practice Template
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Node.js](https://img.shields.io/badge/Node.js-v23.11.0-green)
 ![Made with TypeScript](https://img.shields.io/badge/Made%20with-TypeScript-blue)
 
@@ -153,12 +152,3 @@ npm run format   # 코드 자동 포맷 (Prettier)
 ```
 
 > 위 설정을 적용하면 저장 시 Prettier로 자동 포맷되고, ESLint에 따라 사용되지 않는 코드(import 등)도 자동으로 제거됩니다.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.  
-See the [LICENSE](./LICENSE) file for details.
-
-© 2025 Sukyoung Shin. All rights reserved.
