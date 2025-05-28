@@ -119,6 +119,9 @@ npm run start
 
 ## 🧹 코드 정리 (Lint & Format)
 
+본 프로젝트는 ESLint와 Prettier로 코드 품질을 유지하며, GitHub에 코드를 푸시할 때 GitHub Actions를 통해 자동으로 검사 및 포맷을 수행합니다.<br/>
+로컬 환경에서 직접 린트 및 포맷을 실행하려면 아래 명령어를 사용하세요:
+
 ```shell
 npm run lint     # 코드 스타일 및 규칙 검사 (ESLint)
 npm run format   # 코드 자동 포맷 (Prettier)
