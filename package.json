@@ -16,7 +16,6 @@
     "ts": "./bin/ts.js"
   },
   "scripts": {
-    "postinstall": "npm link",
     "start": "tsx src/index.ts",
     "test": "tsx src/test.ts",
     "lint": "npx eslint . --ext .js,.ts",
