@@ -22,7 +22,7 @@ class Collection {
   isEmpty() {
     return this.list.length === 0;
   }
-  length(size?: undefined) {
+  length(size?: number) {
     if (!size) return this.list.length;
 
     this.list.length = size;
