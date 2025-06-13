@@ -25,38 +25,30 @@ for (let i = 0; i < emps.length; i++) {
 }
 
 const empDept = new Map();
-emps.forEach(({ id, name, dept }) => {
-  const key = { id, name };
-  const value = deptMap.get(dept);
+emps.forEach((e) => {
+  Object.defineProperty(e, 'dept', {
+    enumerable: false,
+  });
 
-  if (!value) {
-    console.warn(`부서를 찾을 수 없습니다. id=${dept}`);
-  } else {
-    empDept.set(key, value);
-  }
+  empDept.set(e, deptMap.get(e.dept));
 });
-
-function getEmp(empId) {
-  const updateEmp = { ...emps.find(({ id }) => id === empId) };
-  const updateDept = depts.find(({ id }) => id === updateEmp.dept);
-
-  updateEmp.dept = updateDept;
-  return updateEmp;
-}
 
 console.log('deptMap >> ', deptMap); // Map(2) { 1 => { id: 1, dname: '인사팀' }, 2 => { id: 2, dname: '개발팀' } }
 console.log('empMap >> ', empMap); // Map(2) { 1 => {id: 1, name: 'Hong', dept: 1}, 2 => {id: 2, name: 'Kim', dept: 2}, … }
 console.log('empDept >> ', empDept); // Map(4) { { id: 1, name: 'Hong' } => { id: 1, dname: '인사팀' }, { id: 2, name: 'Kim' } => { id: 2, dname: '개발팀' }, { id: 3, name: 'Park' } => { id: 2, dname: '개발팀' }, { id: 4, name: 'Choi' } => { id: 2, dname: '개발팀' } }
-console.log('hong.dept.name ', deptMap.get(hong.dept)?.dname); // 인사팀
-
-assert.deepStrictEqual(getEmp(1), { id: 1, name: 'Hong', dept: { id: 1, dname: '인사팀' } });
 assert.deepStrictEqual(
   [...empDept.keys()],
   emps.map(({ id, name }) => ({ id, name })),
 );
 
-// TODO:
-// console.log(empDept.get(kim).name); // '개발팀'
-// 개발팀 직원 목록 출력 ⇒ Kim, Park, Choi
+console.log(empDept.get(kim).dname); // '개발팀'
 console.log('empDept.get(kim) >> ', empDept.get(kim));
-// assert.strictEqual(empDept.get(kim)?.dname, devTeam.dname);
+assert.strictEqual(empDept.get(kim)?.dname, devTeam.dname);
+
+function getEmp(empId) {
+  const { dept, ...rest } = empMap.get(empId);
+
+  return { ...rest, dept: deptMap.get(dept) };
+}
+console.log('getEmp(1) >> ', getEmp(1));
+assert.deepStrictEqual(getEmp(1), { id: 1, name: 'Hong', dept: { id: 1, dname: '인사팀' } });
