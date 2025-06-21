@@ -1,3 +1,4 @@
+// 아래 users 배열에 대해서 추가/수정/삭제하는 순수 함수를 작성하시오.
 const hong = { id: 1, name: 'Hong' };
 const kim = { id: 2, name: 'kim' };
 const lee = { id: 3, name: 'Lee' };
